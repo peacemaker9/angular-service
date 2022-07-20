@@ -1,0 +1,11 @@
+<button (click)="addEmp()">add emp</button>
+<ul *ngFor="let x of empList">
+    <li><span (click)="viewEmp(x.id)">view</span>  --- {{x.id}} - {{x.name}}-- <span (click)="deleteEmp(x.id)">delete</span></li>
+</ul>
+<div *ngIf="emp">
+<div *ngFor="let e of emp">
+    <p>id: {{e.id}}</p>
+    <p>name: {{e.name}}</p>
+    <p>eamil: {{e.email}}</p>
+    <p>course: {{e.course}}</p>
+</div></div>
